@@ -41,6 +41,8 @@ st.markdown("""
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.title("⚙️ Settings")
+    import os
+api_key = os.environ.get("GROQ_API_KEY", "")
 
     api_key = st.text_input(
         "Groq API Key",
